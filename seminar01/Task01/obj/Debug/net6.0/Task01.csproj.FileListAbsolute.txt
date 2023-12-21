@@ -1,0 +1,15 @@
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\bin\Debug\net6.0\Task01.exe
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\bin\Debug\net6.0\Task01.deps.json
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\bin\Debug\net6.0\Task01.runtimeconfig.json
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\bin\Debug\net6.0\Task01.dll
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\bin\Debug\net6.0\Task01.pdb
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\Task01.csproj.AssemblyReference.cache
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\Task01.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\Task01.AssemblyInfoInputs.cache
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\Task01.AssemblyInfo.cs
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\Task01.csproj.CoreCompileInputs.cache
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\Task01.dll
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\refint\Task01.dll
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\Task01.pdb
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\Task01.genruntimeconfig.cache
+D:\Users\User\Desktop\GB\3_course_CSharp\seminari\seminar01\Task01\obj\Debug\net6.0\ref\Task01.dll
