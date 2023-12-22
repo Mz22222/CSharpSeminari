@@ -5,6 +5,9 @@
 782 => 9 
 918 => 17*/
 
+
+
+
 Console.WriteLine("Введите трехзначное число: ");
 int numb = Convert.ToInt32(Console.ReadLine());
 if (numb < 0 )
