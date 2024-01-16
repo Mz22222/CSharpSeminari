@@ -7,9 +7,9 @@
 */
 
 // все методы должны быть скомпанованы и вместе. Либо все наверху, либо внизу
-int[] GetArrayRndInt (int size, int max)
+int[] GetArrayRndInt(int size, int max)
 {
-    int[] array = new int [size];
+    int[] array = new int[size];
 
     Random rnd = new Random(); // это какой-то файл, который содержит набор методов для работы со с.ч.
     for (int i = 0; i < array.Length; i++)
@@ -19,7 +19,7 @@ int[] GetArrayRndInt (int size, int max)
     return array;
 }
 
-void PrintArray (int[] array)
+void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -27,9 +27,39 @@ void PrintArray (int[] array)
     }
 }
 
+int CountPrimeNumbers(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        //bool IsPrimeNumber = IsPrimeNumber(array[i]);
+        if (IsPrimeNumber(array[i]))
+        {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+bool IsPrimeNumber(int num)
+{
+    for (int i = 2; i < Math.Sqrt(num); i++)
+    {
+        if (num % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
 int size = 5;
 int maxVal = 100;
 
 // вызовы методов:
-int[] arr = GetArrayRndInt (size, 100);
-PrintArray (arr); // это метод void, поэтому мы его просто вызываем т.к. он ничего не возвращает 
+int[] arr = GetArrayRndInt(size, maxVal);
+PrintArray(arr); // это метод void, поэтому мы его просто вызываем т.к. он ничего не возвращает 
+
+int countPrimeNumbers = CountPrimeNumbers(arr);
+Console.WriteLine($" => {countPrimeNumbers}");
