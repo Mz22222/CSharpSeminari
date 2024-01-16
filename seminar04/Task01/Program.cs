@@ -1,0 +1,35 @@
+﻿/*
+Задайте одномерный массив, заполненныё случайными числами.
+Определите количество простых чисел в этом массиве. (простые числа это те, которые делятся на 1 и само на себя)
+Примеры: 
+[1 34 193] => 2
+[4 341 9521 13] => 3
+*/
+
+// все методы должны быть скомпанованы и вместе. Либо все наверху, либо внизу
+int[] GetArrayRndInt (int size, int max)
+{
+    int[] array = new int [size];
+
+    Random rnd = new Random(); // это какой-то файл, который содержит набор методов для работы со с.ч.
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = rnd.Next(max); // вызов метода Next 
+    }
+    return array;
+}
+
+void PrintArray (int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+}
+
+int size = 5;
+int maxVal = 100;
+
+// вызовы методов:
+int[] arr = GetArrayRndInt (size, 100);
+PrintArray (arr); // это метод void, поэтому мы его просто вызываем т.к. он ничего не возвращает 
