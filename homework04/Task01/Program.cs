@@ -17,13 +17,13 @@ while (true)
     if (int.TryParse(input, out number))
     {
         int sum = 0;
-        while(number >0)
+        while (number > 0)
         {
-            sum += number%10;
-            number/=10;
+            sum += number % 10;
+            number /= 10;
         }
 
-        if(sum%2 ==0)
+        if (sum % 2 == 0)
         {
             Console.WriteLine("[STOP]");
             break;
