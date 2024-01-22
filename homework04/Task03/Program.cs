@@ -6,6 +6,14 @@ int[] array = { 1, 2, 3, 4, 5, 6, 7 };
 int size = array.Length;
 int count = 0;
 int index = 0;
+
+
+Console.Write("Исходный массив: ");
+foreach (int item in array)
+{
+    Console.Write(item + " ");
+}
+
 while (index < size / 2)
 {
     int temp = array[index];
@@ -14,7 +22,8 @@ while (index < size / 2)
     count += 1;
     index += 1;
 }
-//Console.Write(array);
+
+Console.Write("\nПеревернутый массив: ");
 foreach (int item in array)
 {
     Console.Write(item + " ");
