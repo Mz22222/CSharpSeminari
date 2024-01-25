@@ -15,86 +15,55 @@ int[,] numbers = new int[,] {
 5   6   7   8
 1   2   3   4
 */
-
 using System;
 
+//Тело класса будет написано студентом. Класс обязан иметь статический метод PrintResult()
 class UserInputToCompileForTest
 {
+    // Печать массива
     public static void PrintArray(int[,] array)
     {
-        int rowCount = array.GetLength(0);
-        int colCount = array.GetLength(1);
-
-        for (int i = 0; i < rowCount; i++)
+        //Напишите свое решение здесь
+        for (int i = 0; i < array.GetLength(0); i++)
         {
-            for (int j = 0; j < colCount; j++)
+            for (int j = 0; j < array.GetLength(1); j++)
             {
-                Console.Write($"{array[i, j]} ");
+                Console.Write($"{array[i, j]}\t");
             }
             Console.WriteLine();
         }
+
     }
 
+    // Обмен первой с последней строкой
     public static int[,] SwapFirstLastRows(int[,] array)
     {
-        int rowCount = array.GetLength(0);
-        int colCount = array.GetLength(1);
-
-        if (rowCount >= 2)
+        //Напишите свое решение здесь
+        int num;
+        for (int i = 0; i < array.GetLength(0)+1; i++)
         {
-            // Создаем временный массив для хранения первой строки
-            int[] tempRow = new int[colCount];
-            for (int j = 0; j < colCount; j++)
-            {
-                tempRow[j] = array[0, j];
-            }
-
-            // Заменяем первую строку последней строкой
-            for (int j = 0; j < colCount; j++)
-            {
-                array[0, j] = array[rowCount - 1, j];
-            }
-
-            // Восстанавливаем последнюю строку из временного массива
-            for (int j = 0; j < colCount; j++)
-            {
-                array[rowCount - 1, j] = tempRow[j];
-            }
+            num = array[0, i];
+            array[0, i] = array[array.GetLength(1)-2, i];
+            array[array.GetLength(1)-2, i] = num;
         }
 
         return array;
     }
 
-    
-// Обмен элементами массива
+    // Обмен элементами массива
     public static void SwapItems(int[,] array, int i)
     {
-       //Напишите свое решение здесь
-       int colCount = array.GetLength(1);
-
-        if (i >= 0 && i < array.GetLength(0))
-        {
-            for (int j = 0; j < colCount / 2; j++)
-            {
-                int temp = array[i, j];
-                array[i, j] = array[i, colCount - 1 - j];
-                array[i, colCount - 1 - j] = temp;
-            }
-        }
-     
+        //Напишите свое решение здесь
     }
 
     public static void PrintResult(int[,] numbers)
     {
-        // Console.WriteLine("Исходный массив:");
-        // PrintArray(numbers);
-
-        //Console.WriteLine("\nМассив после обмена первой и последней строки:");
-        int[,] result = SwapFirstLastRows(numbers);
-        PrintArray(result);
+        //Напишите свое решение здесь
+        PrintArray(SwapFirstLastRows(numbers));
     }
 }
 
+//Не удаляйте и не меняйте класс Answer!
 class Answer
 {
     public static void Main(string[] args)
@@ -103,8 +72,9 @@ class Answer
 
         if (args.Length >= 1)
         {
-            // Парсинг двумерного массива из аргументов
+            // Предполагается, что строки разделены запятой и пробелом, а элементы внутри строк разделены пробелом
             string[] rows = args[0].Split(',');
+
             int rowCount = rows.Length;
             int colCount = rows[0].Trim().Split(' ').Length;
 
@@ -122,7 +92,7 @@ class Answer
                     }
                     else
                     {
-                        Console.WriteLine($"Ошибка парсинга элемента {rowElements[j]} в целое число.");
+                        Console.WriteLine($"Error parsing element {rowElements[j]} to an integer.");
                         return;
                     }
                 }
@@ -138,7 +108,6 @@ class Answer
                 {9, 10, 11, 12}
             };
         }
-
         UserInputToCompileForTest.PrintResult(numbers);
     }
 }
