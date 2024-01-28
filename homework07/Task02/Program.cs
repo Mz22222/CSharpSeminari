@@ -9,17 +9,17 @@
 */
 
 
-int[] array = { 1, 2, 5, 0, 10, 34 };
-ReverseArray(array, 0); 
+int[] arr = { 1, 2, 5, 0, 10, 34 };
+PrintReverseArray(arr, 0); 
 
-void ReverseArray(int[] Array, int i)
+void PrintReverseArray(int[] Array, int index)
 {
-    if (i > Array.Length - 1) 
+    if (index > Array.Length - 1) 
     {
         return;
     }
 
-    ReverseArray(Array, i + 1);
-    Console.Write(Array[i] + " ");
+    PrintReverseArray(Array, index + 1);
+    Console.Write(Array[index] + " ");
 }
 
